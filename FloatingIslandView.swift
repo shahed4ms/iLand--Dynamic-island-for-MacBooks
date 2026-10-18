@@ -32,7 +32,6 @@ struct FloatingIslandView: View {
 
     private let expandedHeight: CGFloat = 200
 
-    // A more pronounced, elastic bounce when the island expands or collapses.
     private let expansionAnimation = Animation.spring(
         response: 0.62,
         dampingFraction: 0.58,
@@ -53,11 +52,7 @@ struct FloatingIslandView: View {
 
     }
 
-    // MARK: - Feature selection
-
     private var activeFeature: Feature {
-
-        // Priority 1: Safari download
 
         if safariService.download != nil {
 
@@ -65,23 +60,17 @@ struct FloatingIslandView: View {
 
         }
 
-        // Priority 2: Music playing
-
         if musicService.isPlaying {
 
             return .music
 
         }
 
-        // Priority 3: App Store application open
-
         if appStoreService.isRunning {
 
             return .appStore
 
         }
-
-        // Battery is a compact indicator only: charging or below 20%.
 
         if batteryService.isAvailable &&
 
@@ -1135,8 +1124,6 @@ struct FloatingIslandView: View {
         }
     }
 
-    // MARK: - Artwork
-
     private var albumArtwork: some View {
 
         Group {
@@ -1380,7 +1367,6 @@ struct FloatingIslandView: View {
     private func toggleExpansion() {
         guard isFeatureActive, activeFeature != .battery else { return }
 
-        // Light tactile feedback when toggling the island.
         NSHapticFeedbackManager.defaultPerformer.perform(
             .alignment,
             performanceTime: .now
