@@ -25,6 +25,8 @@ Built with SwiftUI and AppKit, iLand combines a minimal dark-glass appearance wi
 -  **Interactive Island** — Expand and collapse the island to reveal additional information.
 -  **Menu Bar Controls** — Access Settings and quit the application.
 -  **Minimal Interface** — Dark styling, rounded corners, subtle shadows, and animated transitions.
+-  **Bluetooth connection** — Indicates bluetooth connection with animated transitions.
+-  **Screen recording** — Detect and display screen recording activity in the floating island.
 
 > Feature availability and behavior depend on the current implementation and macOS permissions.
 
