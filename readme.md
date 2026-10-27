@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="i-2.png" alt="iLand Logo" width="100">
+  <img src="logo.png" alt="iLand Logo" width="100">
 </p>
 
 # iLand — Dynamic Island for MacBooks
